@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>NOAH</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src = "{{ url_for('static', filename='main.js') }}"></script>
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+</head>
+<body>
+  <div class="loading"></div>
+  <!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Input Patient Information</li>
+    <li>Prediction</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset id="fs1">
+    <h2 class="fs-title">Input Patient Information</h2>
+    <h3 class="fs-subtitle">Fill entries for all required input fields</h3>
+
+<table>
+	<tr>
+   		<td>
+   			<label for= "sex">Sex </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="sex" name="sex">
+		    <option value="1">Male</option>
+		    <option value="0">Female</option>
+		    </select>
+		</td>
+	</tr>
+   	<tr>
+   		<td>
+   			<label for=age>Age</label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<input id = "age " name = "age" type=number min =0 max =150 style="padding: 0px;margin-top: 0;margin-bottom: 0"> 
+   		</td>
+   	</tr>
+    <tr>
+   		<td>
+   			<label for= "pneumonia">Pneumonia </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="pneumonia" name="pneumonia">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "diabetes">Diabetes </label>
+   		</td>
+		<td>:</td>
+   		<td>
+   			<select id="diabetes" name="diabetes">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+
+      	<tr>
+   		<td>
+   			<label for= "copd">Copd </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="copd" name="copd">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "asthma">Asthma </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="asthma" name="asthma">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "inmsupr">Inmsupr </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="inmsupr" name="inmsupr">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "cardiovascular">Cardiovascular  </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="cardiovascular" name="cardiovascular">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "obesity">Obesity </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="obesity" name="obesity">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "renal_chronic">Renal Chronic </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="renal_chronic" name="renal_chronic">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+      	<tr>
+   		<td>
+   			<label for= "tobacco">Tobacco </label>
+   		</td>
+   		<td>:</td>
+   		<td>
+   			<select id="tobacco" name="tobacco">
+    		<option value="0">No</option>
+    		<option value="1">Yes</option>
+   			</select>
+   		</td>
+   </tr>
+   <tr>
+    	<td colspan = "3" style="text-align: center"><input type="button" name="next" class="next action-button" value="Submit" id="submit1"/></td>   
+   </tr>
+</table>
+
+
+  </fieldset>
+  <fieldset id="fs2">
+    <h2 class="fs-title">Result</h2>
+    <h3 class="fs-subtitle">Predict the resources required by the patient. </h3>
+    <p id=details></p>
+    
+  </fieldset>
+  
+</form>
+
+</body>
+</html>
